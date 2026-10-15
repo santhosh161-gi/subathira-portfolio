@@ -9,7 +9,7 @@ export const profile: Profile = {
     "I build immersive and intelligent healthcare tools — from haptic VR surgery simulators to real-time sign language recognition — and teach the next generation to do the same.",
   objective:
     "To contribute to academia as an Assistant Professor by combining excellence in teaching, research and service, fostering critical thinking among students, and addressing real-world challenges through scholarly work.",
-  location: "Chennai, India",
+  location: "Coimbatore, Tamil Nadu, India",
   email: "subathirarajavel@gmail.com",
   phone: "+91 84387 10624",
   resumeUrl: "/Subathira-Rajavel-CV.pdf",

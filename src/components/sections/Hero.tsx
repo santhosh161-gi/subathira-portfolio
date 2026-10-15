@@ -53,13 +53,13 @@ export function Hero() {
 
       <Container className="relative">
         <div className="flex flex-wrap items-center justify-between gap-4" data-hero-fade>
-          <p className="eyebrow flex items-center gap-2">
+          {/* <p className="eyebrow flex items-center gap-2">
             <span className="relative flex size-2">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-signal opacity-60 motion-reduce:hidden" />
               <span className="relative inline-flex size-2 rounded-full bg-signal" />
             </span>
             Open to Assistant Professor & research roles
-          </p>
+          </p> */}
           <p className="eyebrow">{profile.location}</p>
         </div>
 

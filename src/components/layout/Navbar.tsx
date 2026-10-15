@@ -34,9 +34,9 @@ export function Navbar() {
     >
       <nav aria-label="Primary" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
         <a href="#top" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid size-9 place-items-center rounded-full bg-ink font-display text-sm text-paper italic transition-colors duration-300 group-hover:bg-signal">
+          {/* <span className="grid size-9 place-items-center rounded-full bg-ink font-display text-sm text-paper italic transition-colors duration-300 group-hover:bg-signal">
             {profile.initials}
-          </span>
+          </span> */}
           <span className="hidden text-sm font-medium sm:block">{profile.name}</span>
         </a>
 
