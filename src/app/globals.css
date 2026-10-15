@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Design tokens
+   Warm "lab notebook" paper, deep ink, and a single signal accent
+   borrowed from an ECG trace.
+------------------------------------------------------------------- */
+@theme {
+  --color-paper: #f5f2eb;
+  --color-paper-deep: #ece7dc;
+  --color-ink: #15181b;
+  --color-ink-soft: #2a2f34;
+  --color-muted: #5d636a;
+  --color-line: #d8d2c4;
+  --color-signal: #c9442b;
+  --color-signal-soft: #f3d9cf;
+  --color-teal: #1d5b58;
+
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --text-display: clamp(3.25rem, 9vw, 8.5rem);
+  --text-display--line-height: 0.92;
+  --text-title: clamp(2.25rem, 5vw, 4rem);
+  --text-title--line-height: 1.02;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    @apply bg-signal text-paper;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-signal;
+  }
+}
+
+@layer components {
+  /* Mono eyebrow label used across sections */
+  .eyebrow {
+    @apply font-mono text-[0.7rem] font-medium tracking-[0.18em] text-muted uppercase;
+  }
+
+  /* Subtle graph-paper texture */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s var(--ease-out-expo);
+  }
+
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+/* SplitText masks for the hero name: extra room so italic overhangs,
+   ascenders and the dot on the "j" are never clipped. */
+.hero-char-mask {
+  padding: 0.14em 0.08em 0.1em;
+  margin: -0.14em -0.08em -0.1em;
+}
+
+/* ------------------------------------------------------------------
+   Animation pre-states
+   Elements are hidden only when JS is running AND the visitor allows
+   motion, so content is always visible without JS or with reduced motion.
+------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal],
+  .js [data-hero-fade],
+  .js [data-hero-title],
+  .js [data-ecg] {
+    visibility: hidden;
+  }
+}

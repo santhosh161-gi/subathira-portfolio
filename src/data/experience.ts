@@ -1,0 +1,78 @@
+import type { Experience } from "@/types";
+
+export const experience: Experience[] = [
+  {
+    id: "iit-madras",
+    role: "Project Associate",
+    organization: "Indian Institute of Technology Madras",
+    department: "Department of Biotechnology",
+    location: "Chennai, India",
+    start: "Jan 2026",
+    end: "Mar 2026",
+    category: "Research",
+    summary:
+      "Built interactive serious games that help neurodiverse children develop cognitive, motor and imitation skills.",
+    highlights: [
+      "Developed 3+ interactive serious games for neurodiverse children, improving cognitive, motor and imitation skills",
+      "Designed imitation-based learning modules for children with Autism Spectrum Disorder, raising engagement by 30% during trials",
+      "Shipped Dunk-it!!, Froot Shoot and Dart Knight as part of a collaborative team",
+      "Integrated real-time motion tracking with MediaPipe, improving interaction accuracy by 25%",
+      "Launched on the Microsoft Store and pilot-tested in special education schools (Clarke School, Mirra School, Chennai)",
+    ],
+    tags: ["MediaPipe", "Serious Games", "ASD", "Motion Tracking"],
+  },
+  {
+    id: "srm-easwari",
+    role: "Junior Research Fellow",
+    organization: "SRM Easwari Engineering College",
+    location: "Chennai, India",
+    start: "Sep 2025",
+    end: "Dec 2025",
+    category: "Research",
+    summary: "DHR-funded project on Indian Sign Language recognition using computer vision and deep learning.",
+    highlights: [
+      "Developed an Indian Sign Language recognition system using MediaPipe and deep learning with high classification accuracy",
+      "Created and curated a structured dataset of 1000+ gesture samples for model training",
+      "Completed a partially developed system, improving performance efficiency by 20%",
+      "Contributed to patent registration of the developed system",
+      "Designed the laboratory layout with project funding and coordinated multiple vendors for setup",
+    ],
+    tags: ["Deep Learning", "MediaPipe", "Dataset Curation", "DHR-funded"],
+  },
+  {
+    id: "excel-college",
+    role: "Assistant Professor",
+    organization: "Excel College of Engineering",
+    department: "Department of Biomedical Engineering",
+    location: "Namakkal, India",
+    start: "May 2025",
+    end: "Aug 2025",
+    category: "Teaching",
+    summary: "Taught core biomedical subjects, ran laboratories and mentored undergraduate students.",
+    highlights: [
+      "Lectured 3+ core subjects including Biomedical Instrumentation, Bio-informatics and VR in Healthcare",
+      "Mentored 60+ students in laboratory sessions and guided academic projects",
+      "Managed the Instrumentation Laboratory and assisted Bio-signal Processing Lab sessions",
+      "Contributed to curriculum development and academic mentoring",
+    ],
+    tags: ["Teaching", "Lab Management", "Curriculum", "Mentoring"],
+  },
+  {
+    id: "ssn-college",
+    role: "Research Associate",
+    organization: "SSN College of Engineering",
+    location: "Chennai, India",
+    start: "Mar 2024",
+    end: "Jun 2025",
+    category: "Research",
+    summary:
+      "XR-based surgery simulation in collaboration with the University of Bologna, Italy.",
+    highlights: [
+      "Developed VR surgical training systems in Unity and Blender with real-time interaction",
+      "Focused on immersive healthcare technology and haptic interaction, improving simulation realism",
+      "Designed and implemented 3D anatomical models and surgical instruments for procedure simulation",
+      "Contributed to haptic feedback integration and interaction logic for a realistic user experience",
+    ],
+    tags: ["Unity", "Blender", "Haptics", "International Collaboration"],
+  },
+];
